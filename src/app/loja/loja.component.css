@@ -1,0 +1,8 @@
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0,0.4);
+    margin: 0% 0% 0% 0%;
+   width: 100%;
+   height: auto;
+}
