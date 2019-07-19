@@ -6,3 +6,102 @@ nav{
    width: 100%;
    height: auto;
 }
+.flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.mercadorias{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(151, 151, 151, 0.5)
+}
+.mercadoria{
+  width: 80%;
+  background-color: #F87F2F;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25%;
+  margin: 4%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin: 3%;
+    font-size: 80%;
+}
+a:active{
+    text-decoration: underline #F87F2F;
+}
+footer{
+    margin-top: -5%;
+    margin-bottom: -15%;
+    justify-content: baseline;
+    color: white;
+    text-align: left;
+    padding: 5% 15%;
+}
+#carrinhoNome{
+    color: gray;
+    font-size: 110%;    
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    margin-right: -35%;
+}
+#valor{
+    color: gray;
+    font-size: 200%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5%;
+    margin-right: -30%;
+}
+.carrinho{
+    margin-right: 45%;
+    width: 50%;
+}
+input{
+    margin: 3%;
+    border: none;
+    background-color: #F87F2F;
+    color: white;
+}
+#carrinhoBranco{
+    position: relative;
+    margin-top: -40%;
+    margin-bottom: 5%;
+    margin-left: 85%;
+    padding-bottom: 20%;
+    padding-left: 5%;
+}
+#saida{
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 10%;
+    background-color: #F87F2F;
+}
+h1{
+    font-weight: 400;
+    color: gray;
+    font-size: 200%;
+}
+#linha{
+    justify-content: center;
+    align-content: center;
+}
+.carrinho img{
+    margin-top: -50%;
+    margin-left: 95%;
+}
+hr{
+    border: 2px solid #F87F2F;
+    color: o#F87F2F;
+    size: 100%
+}
