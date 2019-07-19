@@ -3,8 +3,12 @@ export class User {
     cpf: string;
     email: string;
     password: string;
-
-    constructor(){
-        
+    confirm: string;
+    constructor(name:string, cpf:string,email:string,password:string,confirm:string){
+        this.name = name;
+        this.cpf = cpf;
+        this.email = email;
+        this.password = password;
+        this.confirm = confirm;
     }
 }
