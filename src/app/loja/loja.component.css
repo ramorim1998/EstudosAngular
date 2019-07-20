@@ -104,3 +104,11 @@ hr{
     color: o#F87F2F;
     size: 100%
 }
+#logo{
+    margin-right: 50%;
+}
+#nome{
+    margin-right: 40%;
+    margin-left: -45%;
+    color: black;
+}

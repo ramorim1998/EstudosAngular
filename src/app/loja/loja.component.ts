@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loja.component.css']
 })
 export class LojaComponent implements OnInit {
+  nome:string;
   total:number;
   constructor() {
     this.total = 0.00;
    }
 
   ngOnInit() {
+    
+
   }
   addProduto(produto:number){
     this.total += produto +0.00;
