@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loja.component.css']
 })
 export class LojaComponent implements OnInit {
-
-  constructor() { }
+  total:number;
+  constructor() {
+    this.total = 0;
+   }
 
   ngOnInit() {
   }
-
+  addProduto(produto:number){
+    this.total += produto;
+  }
 }
