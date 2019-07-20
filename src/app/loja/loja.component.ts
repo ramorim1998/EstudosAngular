@@ -8,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class LojaComponent implements OnInit {
   total:number;
   constructor() {
-    this.total = 0;
+    this.total = 0.00;
    }
 
   ngOnInit() {
   }
   addProduto(produto:number){
-    this.total += produto;
+    this.total += produto +0.00;
+    return this.total;
   }
 }
