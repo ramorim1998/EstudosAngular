@@ -1,5 +1,6 @@
 
 .flex{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -11,6 +12,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    color: #004f95;
 }
 nav{
     display: flex;
@@ -30,15 +32,19 @@ form{
     flex-flow: column wrap;
 }
 .enviroment{
-    margin: -35% 60% 0% 0%;
+    margin: -28% 65% 0% 0%;
+    justify-content: flex-start;
 }
 fieldset{
+    background-color: rgba(151,151,151, 0.7);
+    border: none;
+    border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70%;
-    width: 50%;
-    margin:0% 3% 0% 0%;
+    height: auto;
+    width: 40%;
+    margin:0% 3% 0% 5%;
 }
 input{
     size: 30%;
@@ -47,6 +53,40 @@ input{
 #jackAlerta{
     padding: 0%;
     margin: 0% 0% 0% 0%;
-    width: 60%;
-    height: 60%;
+    width: 55%;
+    height: 55%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin: 3%;
+    font-size: 80%;
+}
+a:active{
+    text-decoration: underline #F87F2F;
+}
+button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 2%;
+    margin: 5% 0% 5% 0%;
+}
+h1{
+    font-weight: 100;
+    padding-left: 3%;
+    margin: 1% 5% 1% 0%;
+    color: white;
+    background-color: #834EE1;
+    width: auto;
+}
+#azul{ 
+    text-align: center;
+    margin: 0% -5% 0% 5%;
+    background-color: #004f95;
+}
+#entrar{
+    padding: 0% 2% 0% 2%;
+    background-color: #F87F2F;
+    border-radius: 30px;
 }
