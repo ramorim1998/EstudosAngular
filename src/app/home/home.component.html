@@ -7,13 +7,13 @@
     </nav>
     <fieldset>
       <legend><img src="/assets/basqueteLOGO.png" alt="basqueteLOGO"></legend>
-    <form [formGroup] = "userForm">
-      <label for="name">Nome:<br><input type="text" id="name" name="name" formControlName = "name"></label>
-      <label for="email">Email: <br><input type="email" name="email" id="email" formControlName = "email"></label>
-      <label for="cpf">CPF: <br> <input type="text" name="cpf" id="cpf" formControlName = "cpf"></label>
-      <label for="senha">Senha: <br> <input type="password" name="senha" id="senha" formControlName = "senha"></label>
-      <label for="confirm">Confirme senha: <br> <input type="password" name="confirm" id="confirm" formControlName = "confirm"></label>
-      <button type="submit">Confirme</button>
+    <form [formGroup] = "userForm" (ngSubmit) = "enviarForm()">
+      <label for="name">Nome:<br><input type="text" id="name" name="name" formControlName = "name" placeholder="Jack Santana"></label>
+      <label for="email">Email: <br><input type="email" name="email" id="email" formControlName = "email" placeholder="jacksant@maisunifacisa.com.br" required></label>
+      <label for="cpf">CPF: <br> <input type="text" name="cpf" id="cpf" formControlName = "cpf" placeholder="apenas numeros"></label>
+      <label for="senha">Senha: <br> <input type="password" name="senha" id="senha" formControlName = "senha" placeholder="mínimo de 5 caracteres" minlength="5"></label>
+      <label for="confirm">Confirme senha: <br> <input type="password" name="confirm" id="confirm" formControlName = "confirm" placeholder="mínimo de 5 caracteres" minlength="5"></label>
+      <button type="submit" >Criar conta</button>
     </form>
   </fieldset>
   <div class="enviroment">  

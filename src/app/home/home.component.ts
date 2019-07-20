@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
+import { FormGroup, FormBuilder, Validators, MinLengthValidator } from '@angular/forms';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,8 +8,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   userForm: FormGroup;
-
-  constructor(    private formBuilder: FormBuilder,    ) { 
+  router: Router;
+  constructor(router: Router, private formBuilder: FormBuilder) { 
+    this.router = router;
   }
 
   ngOnInit() {
@@ -17,13 +18,16 @@ export class HomeComponent implements OnInit {
       name: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
       cpf: [null, Validators.required],
-      senha: [null, Validators.required],
-      confirm: [null,Validators.required]
+      senha: [null, Validators.required, Validators.minLength(5)],
+      confirm: [null,Validators.required, Validators.minLength(5)]
     })
   }
   enviarForm(){
-    alert("aaaa");
-    console.log(this.userForm.getRawValue());
+    if(this.userForm.invalid == true){
+      alert("Preencha corretamente o formulario de cadastro");
+    }else{
+      this.router.navigate(['/','loja']);
+    }
   }
 
 }
