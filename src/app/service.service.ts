@@ -11,8 +11,14 @@ import { Injectable } from '@angular/core';
 
 export class ServiceService {
   user: User;
-  constructor() { }
+  constructor() {
+    
+   }
 getUser(){
   return this.user.name;
+  }
+
+  cadastraUser(user:User){
+    this.user = new User(user.name,user.cpf,user.email,user.password,user.confirm);
   }
 }

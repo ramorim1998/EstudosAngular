@@ -17,8 +17,7 @@ export class LojaComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.nome = this.user.name;
-    this.getNome;
+    this.getNome();
     console.log(this.nome);
   }
   getNome(): void{

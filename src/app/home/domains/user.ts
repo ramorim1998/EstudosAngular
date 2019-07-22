@@ -12,10 +12,6 @@ export class User {
         this.confirm = confirm;
         
     }
-    getName(){
-    return this.name;
-}
-
     
 }
  
