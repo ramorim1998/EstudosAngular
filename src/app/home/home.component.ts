@@ -9,6 +9,7 @@ import { equal } from 'assert';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+// classe responsavel pela logica da pagina Home e funções de cadastro de usuario
 export class HomeComponent implements OnInit {
   userForm: FormGroup;
   service : ServiceService;
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    //setando valores do userForm
     this.userForm = this.formBuilder.group({
       name: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
@@ -27,26 +29,26 @@ export class HomeComponent implements OnInit {
       confirm: [null,[Validators.required, Validators.minLength(5)]]
     })
   }
+  //metodo de copia do User para uso do Service
   dadosUser() : User{
     const user:User = {
       name: this.userForm.get('name').value,
       cpf: this.userForm.get('cpf').value,
       email: this.userForm.get('email').value,
       password: this.userForm.get('senha').value,
-      confirm: this.userForm.get('confirm').value
     }
     return user;
   }
 
-
+  //metodo de envio do formulario, checando se ele é válido ou não
   enviarForm(){
     if(this.userForm.invalid == true || ! this.userForm[3] === this.userForm[4]){
       alert("Preencha corretamente o formulario de cadastro");
     }else{
-      this.router.navigate(['/','loja']);
+      this.router.navigate(['/','loja']);   
+      this.service.cadastraUser(this.dadosUser());
+
     }
-    this.service.cadastraUser(this.dadosUser());
-    console.log(this.userForm.getRawValue());
   }
   
 }

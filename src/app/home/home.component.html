@@ -1,15 +1,18 @@
 <div class="flex">
     <nav>
+            <!--barra de navegação usando routerLink entre as paginas-->
       <a routerLink ="/loja">LOJA</a>
       <a href="">JOGOS</a>
       <a href="">CONTATOS</a>
       <a routerLink = "/home" id="entrar"> ENTRAR</a>
     </nav>
+    <!--esqueleto do espaço de cadastro do usuario-->
     <fieldset>
       <legend><img src="/assets/basqueteLOGO.png" alt="basqueteLOGO"></legend>
+      <!--formulario que recebe os dados de cadastro-->
     <form [formGroup] = "userForm" (ngSubmit) = "enviarForm()">
       <label for="name">Nome:<br><input type="text" id="name" name="name" formControlName = "name" placeholder="Jack Santana"></label>
-
+      
       <label for="email">Email: <br><input type="email" name="email" id="email" formControlName = "email" placeholder="jacksant@maisunifacisa.com.br" required></label>
       
       <label for="cpf">CPF: <br> <input type="text" name="cpf" id="cpf" formControlName = "cpf" placeholder="apenas numeros"></label>
@@ -21,6 +24,7 @@
       <button type="submit" >Criar conta</button>
     </form>
   </fieldset>
+  <!--informe unifacisa-->
   <div class="enviroment">  
     <h1>JACK TE CONVIDA</h1>
     <h1 id="azul">PARA CONHECER O SITE</h1>

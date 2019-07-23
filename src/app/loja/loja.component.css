@@ -108,7 +108,8 @@ hr{
     margin-right: 50%;
 }
 #nome{
-    margin-right: 40%;
+    margin-right: 35%;
     margin-left: -45%;
     color: black;
+    text-transform: uppercase;
 }

@@ -8,17 +8,18 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-
+// classe service que fornece comunicação entre Home e Loja
 export class ServiceService {
   user: User;
   constructor() {
     
    }
+// metodo de retorno do nome do usuario para uso na loja
 getUser(){
   return this.user.name;
   }
-
+// metodo de cadastro do usuario
   cadastraUser(user:User){
-    this.user = new User(user.name,user.cpf,user.email,user.password,user.confirm);
+    this.user = user;
   }
 }
