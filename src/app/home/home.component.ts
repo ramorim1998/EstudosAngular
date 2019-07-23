@@ -13,8 +13,9 @@ export class HomeComponent implements OnInit {
   userForm: FormGroup;
   service : ServiceService;
   router: Router;
-  constructor(router: Router, private formBuilder: FormBuilder) { 
+  constructor(router: Router, private formBuilder: FormBuilder, service: ServiceService) { 
     this.router = router;
+    this.service = service;
   }
 
   ngOnInit() {
